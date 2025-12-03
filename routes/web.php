@@ -27,3 +27,7 @@ Route::get('/auth/google/callback', function () {
 
     return redirect('https://www.youtube.com/?gl=TW&hl=zh-tw'); // 登入完要導去哪裡
 })->name('google.callback');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
