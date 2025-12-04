@@ -4,7 +4,7 @@ namespace App\Services\Login\OAuth;
 
 use Laravel\Socialite\Facades\Socialite;
 
-class GoogleLoginService implements LoginInterface
+class GoogleLoginService implements OAuthLoginInterface
 {
     public function driver(): string
     {
@@ -14,5 +14,10 @@ class GoogleLoginService implements LoginInterface
     public function redirect()
     {
         return Socialite::driver('google')->redirect();
+    }
+
+    public function callback()
+    {
+        
     }
 }

@@ -4,7 +4,7 @@ namespace App\Services\Login\OAuth;
 
 use Laravel\Socialite\Facades\Socialite;
 
-class GithubLoginService implements LoginInterface
+class GithubLoginService implements OAuthLoginInterface
 {
     public function driver(): string
     {
@@ -14,5 +14,10 @@ class GithubLoginService implements LoginInterface
     public function redirect()
     {
         return Socialite::driver('github')->redirect();
+    }
+
+    public function callback()
+    {
+        
     }
 }

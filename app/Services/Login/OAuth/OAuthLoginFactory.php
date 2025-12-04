@@ -2,7 +2,7 @@
 
 namespace App\Services\Login\OAuth;
 
-class LoginFactory
+class OauthLoginFactory
 {
     public function __construct(
         private LineLoginService $lineLogin,
@@ -10,7 +10,7 @@ class LoginFactory
         private GoogleLoginService $googleLogin,
     ) {}
 
-    public function create(string $driver): LoginInterface
+    public function create(string $driver): OAuthLoginInterface
     {
         return match ($driver) {
             'line' => $this->lineLogin,
