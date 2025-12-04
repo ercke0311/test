@@ -2,7 +2,7 @@
 
 namespace App\Services\Login\OAuth;
 
-class OauthLoginFactory
+class OAuthLoginFactory
 {
     public function __construct(
         private LineLoginService $lineLogin,
