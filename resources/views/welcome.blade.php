@@ -118,6 +118,12 @@
                             <a href="{{ route('google.redirect') }}">
                                 使用 Google 登入
                             </a>
+                            <a href="{{ route('line.redirect') }}">
+                                使用 line 登入
+                            </a>
+                            <a href="{{ route('github.redirect') }}">
+                                使用 github 登入
+                            </a>
 
                         </li>
                     </ul>
