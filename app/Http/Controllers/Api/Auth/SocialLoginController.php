@@ -15,10 +15,17 @@ class SocialLoginController extends Controller
         $this->loginFactory = $loginFactory;
     }
 
-    public function redirect(Request $request, string $driver)
+    public function redirect(string $driver)
     {
         return $this->loginFactory
             ->create($driver)
             ->redirect();
+    }
+
+    public function callback(string $driver)
+    {
+        return $this->loginFactory
+            ->create($driver)
+            ->callback();
     }
 }
